@@ -1,6 +1,6 @@
 pkgbase = jupiter-fan-control
 	pkgdesc = CachyOS - Deckify Steam Deck Fan Control
-	pkgver = 20240523.3
+	pkgver = 20260319.1
 	pkgrel = 1
 	arch = any
 	license = GPL-3.0-later
@@ -11,8 +11,8 @@ pkgbase = jupiter-fan-control
 	depends = python-pyaml
 	options = !strip
 	options = !debug
-	source = git+https://github.com/evlaV/jupiter-fan-control.git#tag=20240523.3
-	sha256sums = df190272cf39b096b53dddbd715c14b4c9457a280f3f9dfe1c04a3ed2d3f81e0
-	sha512sums = 84eac432b3384f3876e0039fa7ed151700dc50fd8f299f21d013e3cf0bbb6db0c39b16d2afc857462208f8efcf8a96f1dc3b7a7f29ad57a3dc660460a6ec7bb4
+	source = git+https://github.com/evlaV/jupiter-fan-control.git#tag=20260319.1
+	sha256sums = c602b8d01664c6569b9290f58e216ced6a3e7046916e22df29541dc583adb572
+	sha512sums = d922a8409675f698ea811445f92341daca0dc8cadb411604fef899a223498fcad1c5f8723b1a55041d153bbb5374e96a1c26c147399c11765e67aa14d476da6b
 
 pkgname = jupiter-fan-control
