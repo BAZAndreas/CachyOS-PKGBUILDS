@@ -2,7 +2,7 @@
 
 pkgname=jupiter-hw-support
 pkgver=20260327.1
-pkgrel=1
+pkgrel=2
 arch=('any')
 license=('MIT')
 depends=(
@@ -32,7 +32,7 @@ sha256sums=('2d6ba9efdba8367c998df748b2572feb176efb5b7c132707758f7fb7670b1238'
             'c7db0e977fb0c3a1526b8482e349f73304fc6397d7337c48fe0c990bde64412c'
             'd6b5636eb09d2190b10eb665238c30960babba96424fc9768e36966495fa795e'
             'd3098f26eaa26d9eccfedeac792e47a03317bdd16b17ba03be0fbd1ed6621c5d'
-            '0d4660622887a360bef8f913e7bbd47ac262632acff503a3ca8cecbb6f4a943d')
+            '08f74658e72d3de03d9ff10018aa9d5b472af4d7a13bed001330b2a11a410c12')
 prepare() {
   cd "${pkgname}"
 
