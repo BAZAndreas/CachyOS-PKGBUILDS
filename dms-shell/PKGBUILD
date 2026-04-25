@@ -2,7 +2,7 @@
 
 pkgbase=dms-shell
 _pkg1=DankMaterialShell
-pkgname=($pkgbase $pkgbase-hyprland $pkgbase-niri)
+pkgname=$pkgbase
 pkgver=1.4.4.1
 pkgrel=2
 pkgdesc='A Quickshell-based desktop shell with Material 3 design principles'
@@ -51,10 +51,8 @@ _completion() {
 	core/dms completion $1
 }
 
-package_dms-shell() {
+package() {
 	cd "$_archive"
-	optdepends+=('dms-shell-hyprland: Hyprland specific dependencies')
-	optdepends+=('dms-shell-niri: Niri specific dependencies')
 	install -Dm0755 -t "$pkgdir/usr/bin/" core/dms
 	install -dm0755 "$pkgdir/usr/share/quickshell/dms"
 	cp -r "quickshell/"* "$pkgdir/usr/share/quickshell/dms/"
@@ -67,20 +65,4 @@ package_dms-shell() {
 	install -Dm0644 <(_completion bash) "$pkgdir/usr/share/bash-completion/completions/dms"
 	install -Dm0644 <(_completion zsh) "$pkgdir/usr/share/zsh/site-functions/_dms"
 	install -Dm0644 <(_completion fish) "$pkgdir/usr/share/fish/vendor_completions.d/dms.fish"
-}
-
-package_dms-shell-hyprland() {
-	pkgdesc+=' (for Hyprland)'
-	provides=(dms-shell-compositor)
-	depends=(dms-shell
-	         hyprland)
-	optdepends=()
-}
-
-package_dms-shell-niri() {
-	pkgdesc+=' (for Niri)'
-	provides=(dms-shell-compositor)
-	depends=(dms-shell
-	         niri)
-	optdepends=()
 }
